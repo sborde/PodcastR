@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hu.borde.podcastr.PlayPodcast">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/upper_menubar">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/books_label"
+            android:textSize="10sp"
+            android:id="@+id/book_button" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/podcast_label"
+            android:textSize="10sp"
+            android:id="@+id/podcast_button" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bookmarks"
+            android:textSize="10sp"
+            android:id="@+id/bookmark_button" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:text="@string/nowplay_label"
+            android:id="@+id/nowplay_button" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upper_menubar"
+        android:text="@string/now_playing_label"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This will be the 'Currently playing' activity. The upper menubar remains the same. In the middle some representative picture will be shown (book cover, podcast logo ...). Above the control buttons there will be a 'Bookmark' button, so we can bookmark the current position of the currently played file. To play a soundfile, I need to use the MediaPlayer class and it's services. To handle the playback lifecycle and respond to the system interrups appropriately, we have to use Android's AudioManager class (we can request the audio focus through it, and it will listen to the requests of other apps)."
+        android:layout_below="@id/label" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="◀◀"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="■"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="▶"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="▶▶"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

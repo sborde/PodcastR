@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="hu.borde.podcastr.PaymentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/upper_menubar">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/books_label"
+            android:textSize="10sp"
+            android:id="@+id/book_button" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/podcast_label"
+            android:textSize="10sp"
+            android:id="@+id/podcast_button" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bookmarks"
+            android:textSize="10sp"
+            android:id="@+id/bookmark_button" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/nowplay_label"
+            android:textSize="10sp"
+            android:id="@+id/nowplay_button" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/payment_label"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This activity would be the payment site, where user can buy audiobooks. I would use Android Pay for it. For that I have to add a new dependency to my project, the com.google.android.gms:play-services-wallet:11.0.2"
+        android:layout_below="@id/upper_menubar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Then I have to select a payment processor, I choose Braintree because I already used it as customer. Before processing the payment, I have to request a token using the PaymentMethodTokenizationParameters class."
+        android:layout_below="@id/upper_menubar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="After that, using the MaskedWalletRequest class, I have to retrieve the information to initiate the purchase (items in cart, shipping address ...). This masked Wallet object will be used to initialize 'Pay with...' button"
+        android:layout_below="@id/upper_menubar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="With use of WalletSegments we can create a Pay with button and a confirmation screen. If user confirmed the payment, the FullWallet will be retrieved with a FullWalletRequest object. From the FullWallet object, I have enough information to proceed with payment."
+        android:layout_below="@id/upper_menubar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="After the previous step, I can send the payment request to the payment processor."
+        android:layout_below="@id/upper_menubar" />
+
+</LinearLayout>

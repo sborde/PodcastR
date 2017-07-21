@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PodcastR</string>
+    <string name="books_label">BOOKS</string>
+    <string name="podcast_label">PODCASTS</string>
+    <string name="bookmarks">BOOKMARKS</string>
+    <string name="nowplay_label">NOWPLAY</string>
+    <string name="payment_label">PAYMENT</string>
+    <string name="now_playing_label">NOW PLAYING</string>
+</resources>

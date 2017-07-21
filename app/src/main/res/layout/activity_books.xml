@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hu.borde.podcastr.BooksActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/upper_menubar">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/books_label"
+            android:textSize="10sp"
+            android:id="@+id/book_button" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/podcast_label"
+            android:textSize="10sp"
+            android:id="@+id/podcast_button" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bookmarks"
+            android:textSize="10sp"
+            android:id="@+id/bookmark_button" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/nowplay_label"
+            android:textSize="10sp"
+            android:id="@+id/nowplay_button" />
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upper_menubar"
+        android:text="@string/books_label"/>
+
+    <TextView
+        android:id="@+id/desc_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Here will be the list of audiobooks. If user 'clicks' on an item, it will be played from the beginning. To list the available files on our phone, we have to use the ContentResolver class. You can buy new audiobooks by clicking the button below."
+        android:layout_below="@id/label" />
+
+    <Button
+        android:id="@+id/buy_book_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/desc_text"
+        android:textSize="10sp"
+        android:text="Buy books"/>
+
+</RelativeLayout>
